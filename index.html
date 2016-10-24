@@ -1,20 +1,151 @@
-<!DOCTYPE html>
+<!DOCTYPE HTML>
 <html>
-  <head>
-    <style>
-      body{
-      background-color: #EEE;
-      }
-      h1{
-      color: white;
-      }
-    
-    </style>
-  </head>
-  
-  <body>
-    <h1>This is a website</h1>
-  </body>
-  
-  
+<head>
+<title>Beeler World</title>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+<script type='text/javascript'></script>
+<link rel="stylesheet" type="text/css" href="style_1.css"/>
+
+
+
+</head>
+
+<body>	
+  <div id ='header'>
+    <ul>
+    <li><a href = "http://www.runnersworld.com/">Runners World</a></li>
+    <li><a href = "http://www.bgrr.com/">BG Road Runners</a></li>
+    <li><a href = "http://www.owensbororunningclub.com/12.html">Owensboro Running Club</a></li>
+    <li><a href = "tictactoe.html"/>Tic-Tac-Toe</a></li>
+  </ul>
+  </div>
+
+  <div id = 'container'>
+  <h1>Personal Records</h1>
+
+  <table border="1" style="width:100%">
+    <tr>
+      <th>DISTANCE</th>
+      <th>PR TIME</th>
+      <th>DATE</th>
+      <th>RACE NAME</th>
+      <th>LOCATION</th>
+
+
+    </tr>
+
+  <tr class = 'cow'>    
+    <td>Marathon</td>
+    <td>3:42:49</td>
+    <td>October 19, 2014</td>
+    <td>Grand Rapids Marathon</td>
+    <td>Grand Rapids, MI</td>
+  </tr>
+
+   <tr class = 'cow'>    
+    <td>Half Marathon</td>
+    <td>1:43:15</td>
+    <td>October 7, 2012</td>
+    <td>Music City Half Marathon</td>
+    <td>Nashville, TN</td>
+  </tr>
+
+  <tr class = 'cow'>    
+    <td>10 Mile</td>
+    <td>1:19:14</td>
+    <td>January 1, 2014</td>
+    <td>Hangover Classic 10 Miler</td>
+    <td>Louisville, KY</td>
+  </tr>
+
+  <tr class = 'cow'>    
+    <td>10K</td>
+    <td>45:22</td>
+    <td>October 13, 2012</td>
+    <td>The Medical Center 10K Classic</td>
+    <td>Bowling Green, KY</td>
+  </tr>
+
+  <tr class = 'cow'>    
+    <td>5K</td>
+    <td>21:45</td>
+    <td>November 10, 2012</td>
+    <td>Stars and Stripes 5K</td>
+    <td>KY Dam Village</td>
+  </tr>
+ </table>
+
+
+<button id = 'pig'>Hide</button>
+<button id = 'hog'>Show</button>
+
+<br>
+<br>
+
+
+<p id = 'quote'>"To give anything less than your best, is to sacrifice the gift." </p>
+
+<p id = 'steve'>Steve Prefontaine</p>
+<br>
+<br>
+
+<div class="w3-content" style="max-width:800px;position:relative">
+
+<img class="mySlides" src="C:\Users\charliebeeler\Pictures\Mini Marathon\IMG_2072.JPG" style="width:60%">
+<img class="mySlides" src="C:\Users\charliebeeler\Pictures\Mini Marathon\IMG_2070.JPG" style="width:60%">
+<img class="mySlides" src="C:\Users\charliebeeler\Pictures\Mini Marathon\IMG_2069.JPG" style="width:60%">
+<img class="mySlides" src="C:\Users\charliebeeler\Pictures\Mini Marathon\IMG_2057.JPG" style="width:60%">
+
+<a class="w3-btn-floating" style="position:absolute;top:45%;left:0" onclick="plusDivs(-1)"><</a>  
+<a class="w3-btn-floating" style="position:absolute;top:45%;right:0" onclick="plusDivs(1)">></a>
+
+</div>
+
+
+
+
+</div>
+
+
+
+  <script>
+  $(document).ready(function(){
+    $('#pig').click(function(){
+    $('.cow').slideUp()
+    });
+  });
+$(document).ready(function(){
+    $('#hog').click(function(){
+    $('.cow').slideDown()
+    });
+  });
+
+
+  var slideIndex = 1;
+showDivs(slideIndex);
+
+function plusDivs(n) {
+  showDivs(slideIndex += n);
+}
+
+function showDivs(n) {
+  var i;
+  var x = document.getElementsByClassName("mySlides");
+  if (n > x.length) {slideIndex = 1}    
+  if (n < 1) {slideIndex = x.length} ;
+  for (i = 0; i < x.length; i++) {
+     x[i].style.display = "none";  
+  }
+  x[slideIndex-1].style.display = "block";  
+}
+
+  </script>
+
+  					
+
+
+</body>
+
+
+
 </html>
